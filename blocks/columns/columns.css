@@ -16,7 +16,7 @@
 }
 
 .columns > div > .columns-img-col img {
-  display: block;
+  display: flex;
 }
 
 @media (width >= 900px) {
