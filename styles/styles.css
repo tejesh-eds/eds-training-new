@@ -257,3 +257,7 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.section.highlight h2 {
+  color: var(--background-color);
+}
