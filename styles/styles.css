@@ -258,6 +258,7 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.section.highlight h2 {
+.section.highlight .default-content-wrapper h2,
+.section.highlight .default-content-wrapper p {
   color: var(--background-color);
 }
