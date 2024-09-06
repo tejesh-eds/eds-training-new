@@ -12,13 +12,14 @@
 
 :root {
   /* colors */
-  --background-color: cyan;
+  --background-color: #006061;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #f9086a;
-  --link-color: #480808;
-  --link-hover-color: #1d3ecf;
-
+  --text-color: #FAFAFA;
+  --link-color: #f7f3f3;
+  --link-hover-color: #241b23;
+  --link-button-hover-color: #FAFAFA;
+  --text-color-footer: #006061;
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -195,6 +196,7 @@ button:hover,
 button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
+  color: var(--link-button-hover-color);
 }
 
 button:disabled,
