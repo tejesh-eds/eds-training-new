@@ -143,6 +143,7 @@ header .nav-brand {
   font-weight: 700;
   line-height: 1;
 }
+
 header .nav-brand p a {
   color: var(--text-color);
 }
