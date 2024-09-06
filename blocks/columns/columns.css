@@ -19,6 +19,10 @@
   display: flex;
 }
 
+.columns-container .default-content-wrapper a {
+  color: #0a91f1;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
