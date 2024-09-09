@@ -1,0 +1,16 @@
+.block-custom-creation {
+    background-color: #00f;
+    padding: 10px;
+}
+
+.block-custom-creation > div {
+    display: flex;
+}
+
+.block-custom-creation > div > div {
+    flex: 50%;
+}
+
+.block-custom-creation p {
+    margin: 0 10px;
+}
