@@ -25,6 +25,7 @@
   background-color: var(--light-color);
   color: #000;
 }
+
 .accordion details[open] summary p a {
   color: #000;
 }

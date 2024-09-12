@@ -6,6 +6,7 @@ function renderVimeoVideo(vimeoUrl, link) {
   iframe.height = '360';
   iframe.frameBorder = '0';
   iframe.allow = 'autoplay; fullscreen';
+  iframe.title = 'My Video';
   link.parentNode.insertBefore(iframe, link.nextSibling);
 }
 
