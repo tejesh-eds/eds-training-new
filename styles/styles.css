@@ -281,3 +281,7 @@ main .section.block-custom-creation-container {
   justify-content: center;
   color: #000;
 }
+
+main > .section.video-container {
+	margin-top: 0;
+}
