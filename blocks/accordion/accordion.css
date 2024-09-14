@@ -36,6 +36,11 @@
   color: #000;
 }
 
+.accordion details summary:focus p a,
+.accordion details summary:hover p a {
+  color: #000;
+}
+
 .accordion details summary::-webkit-details-marker {
   display: none;
 }
