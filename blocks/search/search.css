@@ -147,3 +147,11 @@
   width: 24px;
   border-radius: 50%;
 }
+
+.search.block .search-box .icon-search svg {
+  fill: #fff;
+}
+
+.modal-content .search.block .search-box .icon-search svg {
+  fill: #000;
+}
