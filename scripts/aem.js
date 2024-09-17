@@ -171,7 +171,6 @@ function toCamelCase(name) {
  * @param {Element} block The block element
  * @returns {object} The block config
  */
-// eslint-disable-next-line import/prefer-default-export
 function readBlockConfig(block) {
   const config = {};
   block.querySelectorAll(':scope > div').forEach((row) => {
@@ -416,7 +415,7 @@ function decorateButtons(element) {
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
-function decorateIcon(span, prefix = '', alt = '') {
+function decorateIcon(span, prefix = '', alt = 'Icon') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
@@ -425,6 +424,36 @@ function decorateIcon(span, prefix = '', alt = '') {
   img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
   img.alt = alt;
   img.loading = 'lazy';
+
+  function getBackgroundColor(element) {
+    const bgColor = window.getComputedStyle(element).backgroundColor;
+    if (bgColor && bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent') {
+      return bgColor;
+    } else if (element.parentElement) {
+      return getBackgroundColor(element.parentElement);
+    }
+    return '#ffffff'; // Default to white if no background found
+  }
+
+  img.onload = function () {
+    const backgroundColor = getBackgroundColor(span);
+
+    const svgColor = backgroundColor === '#000000' ? '#ffffff' : '#000000'; // Toggle based on background
+
+    // Fetch the SVG and modify the fill
+    fetch(img.src)
+      .then((response) => response.text())
+      .then((svgText) => {
+        const modifiedSvgText = svgText.replace(/<svg /, `<svg fill="${svgColor}" `);
+
+        const svgContainer = document.createElement('div');
+        svgContainer.innerHTML = modifiedSvgText;
+
+        img.replaceWith(svgContainer.firstChild);
+      })
+      .catch((error) => console.error('Error fetching SVG:', error));
+  };
+
   span.append(img);
 }
 
@@ -487,7 +516,6 @@ function decorateSections(main) {
  * @param {string} [prefix] Location of placeholders
  * @returns {object} Window placeholders object
  */
-// eslint-disable-next-line import/prefer-default-export
 async function fetchPlaceholders(prefix = 'default') {
   window.placeholders = window.placeholders || {};
   if (!window.placeholders[prefix]) {

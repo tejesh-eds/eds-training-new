@@ -17,9 +17,11 @@
   --dark-color: #505050;
   --text-color: #FAFAFA;
   --link-color: #f7f3f3;
+  --link-white-color: #fff;
   --link-hover-color: #241b23;
   --link-button-hover-color: #FAFAFA;
   --text-color-footer: #006061;
+  --theme-color: #ED7673;
   
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -183,7 +185,7 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: #fff;
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
@@ -280,4 +282,24 @@ main .section.block-custom-creation-container {
   align-items: center;
   justify-content: center;
   color: #000;
+}
+
+main > .section.video-container {
+	margin-top: 0;
+}
+
+.section .button .icon {
+  vertical-align: middle;
+}
+
+.section.custom-icon .button .icon {
+  margin-right: 5px;
+}
+
+.section.custom-icon .icon.icon-right-arrow {
+  margin-right: 2px;
+}
+
+a.button:hover svg {
+  fill: #fff;
 }

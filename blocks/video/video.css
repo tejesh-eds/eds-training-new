@@ -1,0 +1,25 @@
+/* Video block */
+.video.block > div {
+    border: 1px solid #fff;
+    border-radius: 7px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.video.block p,
+.video.block h3 {
+    margin: 0;
+}  
+
+.video.block div h3:first-child,
+.video.block div h3 strong a {
+    display: none;
+}
+
+.video.block img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    display: none;
+}
