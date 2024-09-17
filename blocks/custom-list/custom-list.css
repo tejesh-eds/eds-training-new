@@ -1,0 +1,103 @@
+.custom-list {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.custom-list table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 600px) {
+    .custom-list table {
+        font-size: var(--body-font-size-s);
+    }
+}
+
+@media (width >= 900px) {
+    .custom-list table {
+        font-size: var(--body-font-size-m);
+    }
+}
+
+.custom-list table thead tr {
+    border-top: 2px solid #dadada;
+    border-bottom: 2px solid #dadada;
+}
+
+.custom-list table tbody tr {
+    border-bottom: 1px solid #dadada;
+}
+
+.custom-list table th {
+    font-weight: 700;
+    background-color: #cd0f07;
+}
+
+.custom-list table th,
+.custom-list table td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+.custom-list table th p,
+.custom-list table td p {
+    margin: 0;
+}
+
+.custom-list table td p + p {
+    margin-top: 0.25em;
+}
+
+.custom-list table td a.button:any-link {
+    margin: 0;
+    line-height: normal;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+
+/* no header variant */
+.custom-list.no-header table tbody tr {
+    border-top: 1px solid #dadada;
+}
+
+/* striped variant */
+.custom-list.striped tbody tr:nth-child(odd) {
+    background-color: var(--light-color);
+}
+
+/* bordered variant */
+.custom-list.bordered table th,
+.custom-list.bordered table td {
+    border: 1px solid #dadada;
+}
+
+button:disabled, 
+button:disabled:hover {
+    background-color: var(--light-color);
+    cursor: no-drop;
+    color: var(--background-color);
+    opacity: 0.6;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pagination button {
+    font-size: 15px;
+}
+
+.pagination button:first-child {
+    margin-right: 10px;
+}
+
+.pagination button.page-number {
+    margin-right: 10px;
+}
