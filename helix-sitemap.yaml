@@ -4,5 +4,5 @@ sitemaps:
   seo:
     source: /query-index.json
     destination: /sitemap.xml
-    lastmod: YYYY-MM-DD
+    lastmod: DD-MM-YYYY
     default: en-US
