@@ -1,0 +1,10 @@
+user-agent: *
+allow: /
+
+disallow: /drafts/
+disallow: /modals/
+disallow: /en/
+disallow: /ar/
+disallow: /unuse/
+
+sitemap: https://main--eds-training-new--tejesh-eds.aem.live/sitemap-index.xml
